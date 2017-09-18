@@ -10,5 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.login = APIUtil.login;
   window.signup = APIUtil.signup;
   window.logout = APIUtil.logout;
-  window.store = store;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
 });
