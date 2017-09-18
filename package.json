@@ -32,5 +32,6 @@
   "bugs": {
     "url": "https://github.com/ldtcooper/benchbnb/issues"
   },
-  "homepage": "https://github.com/ldtcooper/benchbnb#readme"
+  "homepage": "https://github.com/ldtcooper/benchbnb#readme",
+  "devDependencies": {}
 }
