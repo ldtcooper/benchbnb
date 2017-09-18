@@ -1,11 +1,12 @@
 class Api::SessionsController < ApplicationController
+
   def create
     @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
-    if @user.nil
+    if @user.nil?
       render json: ["Invalid username or password"]
     else
       login(@user)
-      render '/views/users/show.json.jbuilder'
+      render '/api/users/show'
     end
   end
 
@@ -17,4 +18,5 @@ class Api::SessionsController < ApplicationController
       render json: ["No user to log out"]
     end
   end
+
 end
