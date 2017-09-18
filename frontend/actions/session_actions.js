@@ -1,9 +1,4 @@
 import * as APIUtil from '../util/session_api_util';
-// login(user) (thunk action creator)
-// logout() (thunk action creator)
-// signup(user) (thunk action creator)
-// receiveCurrentUser(currentUser) (regular action creator)
-// receiveErrors(errors) (regular action creator)
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
