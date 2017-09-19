@@ -13,17 +13,17 @@ export const receiveErrors = (errors) => ({
   errors
 });
 
-export const login = (user) => {
+export const login = (user) => dispatch => {
   return APIUtil.login(user)
-    .then(() => dispatch => (currentUser => receiveCurrentUser(currentUser)));
+    .then((currentUser) => dispatch(receiveCurrentUser(currentUser)));
 };
 
-export const signup = (user) => {
+export const signup = (user) => dispatch => {
   return APIUtil.signup(user)
-    .then(() => dispatch => (currentUser) => receiveCurrentUser(currentUser));
+    .then((currentUser) => dispatch(receiveCurrentUser(currentUser)));
 };
 
-export const logout = () => {
+export const logout = () => dispatch => {
   return APIUtil.logout()
-    .then (() => dispatch => () => receiveCurrentUser(null));
+    .then(() => dispatch(receiveCurrentUser(null)));
 };
