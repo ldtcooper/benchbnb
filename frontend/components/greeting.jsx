@@ -23,7 +23,7 @@ const Greeting = ({currentUser, logout}) => {
   if (currentUser) {
     return(welcome(currentUser, logout));
   } else {
-    return(sessionLinks);
+    return(sessionLinks());
   }
 };
 
